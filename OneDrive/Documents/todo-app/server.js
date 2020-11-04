@@ -2,7 +2,7 @@ let express = require('express')
 let mongodb = require('mongodb')
 let app = express()
 let db
-let connectionString = 'mongodb+srv://todoAppUser:motita2812@cluster0.ojdwb.mongodb.net/ToDoApp?retryWrites=true&w=majority' //Acá le decimos a dónde queremos que Mongo se conecte
+let connectionString = 'mongodb+srv://todoAppUser:<mypw>@cluster0.ojdwb.mongodb.net/ToDoApp?retryWrites=true&w=majority' //Acá le decimos a dónde queremos que Mongo se conecte
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client) {
     db = client.db() //está conectado con la variable let db
     app.listen(3000)
